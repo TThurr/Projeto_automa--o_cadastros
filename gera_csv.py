@@ -2,19 +2,22 @@ import pandas as pd
 
 dados_usuarios = {
     'nome': [
-        'Arthur Silva', 'Beatriz Souza', 'Carlos Oliveira', 'Daniela Lima', 'Eduardo Santos',
-        'Fernanda Rocha', 'Gabriel Mendes', 'Helena Costa', 'Igor Martins', 'Julia Ferreira',
-        'Kevin Souza', 'Larissa Lima', 'Marcos Paulo', 'Nathalia Dias', 'Otavio Luiz'
+        'TESTE_A', 'TESTE_B', 'TESTE_C', 'TESTE_D', 'TESTE_E',
+        'TESTE_F', 'TESTE_G', 'TESTE_H', 'TESTE_I', 'TESTE_J',
+        'TESTE_K', 'TESTE_L', 'TESTE_M', 'TESTE_N', 'TESTE_O'
     ],
     'email': [
-        'arthur@email.com', 'beasouza@provider.com', 'carlos.oli@web.com', 'dani_lima@site.com', 'edu_santos@email.com',
-        'fer.rocha@mail.com', 'gabs.mendes@web.com', 'helena.c@provider.com', 'igor.martins@email.com', 'juju.f@site.com',
-        'kevin.s@mail.com', 'lari.lima@web.com', 'marcos.p@email.com', 'nath.dias@provider.com', 'otavio.l@site.com'
+        'user_01@exemplo.com.br', 'user_02@exemplo.com.br', 'user_03@exemplo.com.br', 
+        'user_04@exemplo.com.br', 'user_05@exemplo.com.br', 'user_06@exemplo.com.br', 
+        'user_07@exemplo.com.br', 'user_08@exemplo.com.br', 'user_09@exemplo.com.br', 
+        'user_10@exemplo.com.br', 'user_11@exemplo.com.br', 'user_12@exemplo.com.br', 
+        'user_13@exemplo.com.br', 'user_14@exemplo.com.br', 'user_15@exemplo.com.br'
     ],
+
     'senha': [
-        'senha123', 'p@ssw0rd', 'admin789', 'dani2024', 'edu#123',
-        'fer12345', 'gab@2026', 'helen@123', 'igor_pass', 'julia@321',
-        'kevin#99', 'lari_2026', 'marcos@pwd', 'nath#456', 'otavio@789'
+        'DUMMY_1', 'DUMMY_2', 'DUMMY_3', 'DUMMY_4', 'DUMMY_5',
+        'DUMMY_6', 'DUMMY_7', 'DUMMY_8', 'DUMMY_9', 'DUMMY_10',
+        'DUMMY_11', 'DUMMY_12', 'DUMMY_13', 'DUMMY_14', 'DUMMY_15'
     ],
     'is_vip': [
         'S', 'N', 'S', 'N', 'S',
@@ -25,12 +28,13 @@ dados_usuarios = {
 
 dados_itens = {
     'email_dono': [
-        'arthur@email.com', 'arthur@email.com', 'arthur@email.com', 'beasouza@provider.com',
-        'carlos.oli@web.com', 'carlos.oli@web.com', 'carlos.oli@web.com', 'dani_lima@site.com',
-        'edu_santos@email.com', 'fer.rocha@mail.com', 'gabs.mendes@web.com', 'gabs.mendes@web.com',
-        'helena.c@provider.com', 'igor.martins@email.com', 'juju.f@site.com', 'kevin.s@mail.com',
-        'lari.lima@web.com', 'marcos.p@email.com', 'marcos.p@email.com', 'nath.dias@provider.com',
-        'otavio.l@site.com'
+        'user_01@exemplo.com.br', 'user_01@exemplo.com.br', 'user_01@exemplo.com.br', 
+        'user_02@exemplo.com.br', 'user_03@exemplo.com.br', 'user_03@exemplo.com.br', 
+        'user_03@exemplo.com.br', 'user_04@exemplo.com.br', 'user_05@exemplo.com.br', 
+        'user_06@exemplo.com.br', 'user_07@exemplo.com.br', 'user_07@exemplo.com.br',
+        'user_08@exemplo.com.br', 'user_09@exemplo.com.br', 'user_10@exemplo.com.br', 
+        'user_11@exemplo.com.br', 'user_12@exemplo.com.br', 'user_13@exemplo.com.br', 
+        'user_13@exemplo.com.br', 'user_14@exemplo.com.br', 'user_15@exemplo.com.br'
     ],
     'id_produto': [
         101, 105, 108, 202, 303, 305, 310, 404, 505, 601, 701, 705, 801, 901, 111, 222, 333, 444, 445, 555, 666
@@ -56,5 +60,8 @@ dados_itens = {
 df_usuarios = pd.DataFrame(dados_usuarios)
 df_itens = pd.DataFrame(dados_itens)
 
+# Salvando os arquivos
 df_usuarios.to_csv('usuarios.csv', index=False, encoding='utf-8')
 df_itens.to_csv('itens_carrinho.csv', index=False, encoding='utf-8')
+
+print("Arquivos de teste gerados com sucesso e sem dados sensíveis!")
